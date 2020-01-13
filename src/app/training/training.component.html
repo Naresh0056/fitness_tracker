@@ -7,4 +7,4 @@
     </mat-tab>
     <mat-tab label="Third"> Content 3 </mat-tab>
 </mat-tab-group>
-<app-cuurent-training *ngIf="onGoingTraining"></app-cuurent-training>
+<app-cuurent-training *ngIf="onGoingTraining" (trainingExt)="onGoingTraining=false"></app-cuurent-training>

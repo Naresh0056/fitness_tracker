@@ -18,6 +18,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { MaterialModule } from './material.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavLestComponent } from './navigation/sidenav-lest/sidenav-lest.component';
+import { StopTrainingComponent } from './training/cuurent-training/stop.training';
+import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { SidenavLestComponent } from './navigation/sidenav-lest/sidenav-lest.com
     PastTrainingComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavLestComponent
+    SidenavLestComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { SidenavLestComponent } from './navigation/sidenav-lest/sidenav-lest.com
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService, TrainingService],
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }
