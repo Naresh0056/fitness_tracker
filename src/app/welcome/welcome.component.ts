@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-
+  // TODO:
+  // FIXME:
   constructor() { }
 
   ngOnInit() {

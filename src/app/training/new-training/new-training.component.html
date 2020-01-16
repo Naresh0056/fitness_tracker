@@ -4,7 +4,7 @@
             <mat-card-title fxLayout fxLayoutAlign="center">Time to start workout!</mat-card-title>
             <mat-card-content fxLayout fxLayoutAlign="center">
                 <mat-form-field>
-                    <mat-select aria-placeholder="fg" ngModel name="exercise">
+                    <mat-select placeholder="Choose Execise" ngModel name="exercise">
                         <mat-option *ngFor="let exercise of exercises" value=" {{exercise.name}}">
                             {{exercise.name}}
                         </mat-option>
@@ -17,7 +17,4 @@
             </mat-card-actions>
         </mat-card>
     </form>
-
-
-
 </section>
