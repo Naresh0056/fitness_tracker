@@ -23,6 +23,7 @@ export class CuurentTrainingComponent implements OnInit {
     this.timer = setInterval(() => {
       this.progress = this.progress + 5;
       if (this.progress >= 100) {
+        this.trainingService.completeExercise();
         clearInterval(this.timer);
       }
     }, 1000)

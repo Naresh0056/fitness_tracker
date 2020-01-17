@@ -16,7 +16,8 @@ export class TrainingService {
         return this.avaliableExercises.slice();
     }
     startExercise(selectedId: string) {
-        this.runningExercise = this.avaliableExercises.find(ex => ex.id === selectedId);
+
+        this.runningExercise = this.avaliableExercises.find(ex => ex.name.toLocaleLowerCase().trim() === selectedId.toLocaleLowerCase().trim());
         this.exercisedChanged.next({ ... this.runningExercise })
 
     }
@@ -38,5 +39,8 @@ export class TrainingService {
         this.exercises.push({ ...this.runningExercise, date: new Date(), state: "completed" })
         this.runningExercise = null;
         this.exercisedChanged.next(null)
+    }
+    getCompletedOrCancelledExercise() {
+        return this.exercises.slice();
     }
 }
